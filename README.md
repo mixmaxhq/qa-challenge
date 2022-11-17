@@ -2,7 +2,7 @@
 
 :speech_balloon: Presented challenge should give us idea about your skills in QA Automation if you would use or have in mind:
 
-- best practices of automationframework, test design patterns, scalability, maintenance, coding, etc. 
+- best practices of automation frameworks, test design patterns, scalability, maintenance, coding, etc. 
 
 :bulb:  Invest effort to present quality, instead of quantity. Even single test done, that shows proficiency in mentioned practices, gives you an oportunity to interest us, as our potential candidate and team member. It's consisted of two tasks, one related to UI automation and other one to REST API.
 
