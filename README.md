@@ -9,7 +9,12 @@
 
 
 
+#### Instructions for start:
 
+- Clone qa-challenge project
+- Create new branch from main one
+- Look over task bellow and understand what needs to be done
+- Figure out project structure
 
 
 `1. Write and automated test for an e-commerce site, fell free to pick any (e.g. http://automationpractice.com/index.php)`
@@ -41,6 +46,7 @@
 >   - Use at least 3 different HTTP response codes in your tests
 > - Report any bugs you find by writing a bug ticket
 >
+
 
 
 
