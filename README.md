@@ -9,12 +9,15 @@
 
 
 
-#### Instructions for start:
+#### Instructions for a start:
 
-- Clone qa-challenge project
-- Create new branch from main one
-- Look over task bellow and understand what needs to be done
-- Figure out project structure
+- Read Challenge Tasks to understand what is asked to be done
+- Figure out which techology stack to use and how to structure a project
+- From a zipe file you got, create:
+    - structure for an automation project, from scratch
+    - bear in mind that project should be runable and easy for 'plug and play' on any machine
+       - define instructions for running a project or tests itself
+    
 
 
 `1. Write and automated test for an e-commerce site, fell free to pick any (e.g. http://automationpractice.com/index.php)`
@@ -29,7 +32,6 @@
 >   - The document have to be clear to the developer and to someone who is not familiar with the technology
 >
 > - Prepare tests for run in a **CI/CD**
-> - Provide steps how to run written tests
 >
 
 
