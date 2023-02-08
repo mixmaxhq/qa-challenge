@@ -1,0 +1,14 @@
+1. Go to Bitbucket link 'https://bitbucket.org/vladparl/e-commerce-fe-automation'
+
+2. Use credentials:
+- username: mamasas478@crtsec.com
+- password: Test123!
+
+3. Go to Pipelines and select Run pipeline
+
+4. Select branch 'master' and click Run
+
+5. When the build is finished (tests execution is done) and you see Green build, go to
+Artifacts tab and download the file 'cypress/reports/*.html'
+
+6. Extract and open in browser by choice to see the test report

@@ -1,0 +1,16 @@
+Postman tool is my first choice for REST API automation. It's very suitable and comprehensive tool for API automation.
+It is pretty fast and reliable. Coding tests requiere basic JavaScript knowledge. There are also predefined code snippets which can be
+easily used by non experinced people and customized by our needs.
+
+
+Other suggestion:
+
+Cucumber with Gherkin syntax is my second choice. Cucumber is automation tool which provides writing tests using BDD approach. Gherkin syntax
+allows writing test cases in plain english language calling defined cucumber functions written in JavaScript, Ruby, Python etc. BDD approach is not
+good for API automation if we have a lot of test cases and edge cases which we want to cover. But, is very useful if we want to present business
+logic with few simple test cases and also to have living documentation easy to change and maintain.  unity and documentation is awesome.
+
+Codeless framework (Katalon Studio, TestProject ...) would be my third choice, because you
+don't have flexibility and have limited access to the tests. Tests are automatically 
+generated, based on user actions. It is very useful if the team has limited technical
+knowledge or you don't have enought time and want to automate something fast without coding.

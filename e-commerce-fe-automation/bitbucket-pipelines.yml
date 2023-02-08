@@ -1,0 +1,15 @@
+image: cypress/browsers:node14.17.6-chrome100-ff98
+
+pipelines:
+  default:
+        - step:
+            name: Run tests
+            deployment: test
+            script:
+              - npm install
+              - echo $password | base64 --decode --ignore-garbage > cypress.env.json
+              - npm run cypress:test:chrome
+            artifacts:
+              - cypress/reports/*.html
+              - cypress/videos/**
+              - cypress/screenshots/**

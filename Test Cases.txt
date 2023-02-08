@@ -1,0 +1,111 @@
+TC1: Create pet with valid data
+
+1. Send POST request to https://petstore.swagger.io/v2/pet/
+2. Send request body Raw -> JSON
+{
+  "id": 123456789,
+  "category": {
+    "id": 10,
+    "name": "Dog"
+  },
+  "name": "Max",
+  "photoUrls": ["https://cdn.shopify.com/s/files/1/0284/2391/3547/articles/American-Pitbull-Puppies-6.JPG_c4357295-9ee4-45f8-9718-e36c98022c46.jpg?v=1603063314"],
+  "status": "available"
+}
+3. Receive response code 200
+4. Verify response:
+- Category is Dog
+- Name is Max
+- Status is available
+
+
+TC2: Create pet with invalid Name
+
+1. Send POST request to https://petstore.swagger.io/v2/pet/
+2. Send request body Raw -> JSON
+{
+  "category": {
+    "id": 10,
+    "name": "Dog"
+  },
+  "name": invalid,
+  "photoUrls": ["https://cdn.shopify.com/s/files/1/0284/2391/3547/articles/American-Pitbull-Puppies-6.JPG_c4357295-9ee4-45f8-9718-e36c98022c46.jpg?v=1603063314"],
+  "status": "available"
+}
+3. Receive response code 400
+4. Verify response message returned
+
+
+TC3: Get pet with valid id
+
+1. Send GET request to https://petstore.swagger.io/v2/pet/{{petId}}
+2. Receive response code 200
+3. Verify response:
+- Category is Dog
+- Name is Max
+- Status is available
+
+
+TC4: Get pet with invalid id
+
+1. Send GET request to https://petstore.swagger.io/v2/pet/invalid
+2. Receive response code 404
+3. Verify response error message returned
+
+
+TC5: Get pet with not existing id
+
+1. Send GET request to https://petstore.swagger.io/v2/pet/4121545641215364874
+2. Receive response code 404
+3. Verify response error message returned
+
+
+TC6: Update Dog's Name and Status
+
+1. Send PUT request to https://petstore.swagger.io/v2/pet/
+2. Send request body Raw -> JSON
+{
+  "id": {{petId}},
+  "category": {
+    "id": 10,
+    "name": "Dog"
+  },
+  "name": "Max - Updated",
+  "photoUrls": ["https://cdn.shopify.com/s/files/1/0284/2391/3547/articles/American-Pitbull-Puppies-6.JPG_c4357295-9ee4-45f8-9718-e36c98022c46.jpg?v=1603063314"],
+  "status": "not available"
+}
+3. Receive response code 200
+4. Verify response:
+- Name is 'Max - Updated'
+- Status is 'not available'
+
+
+TC7: Update Dog with invalid Name
+
+1. Send PUT request to https://petstore.swagger.io/v2/pet/
+2. Send request body Raw -> JSON
+{
+  "id": "{{petId}}",
+  "category": {
+    "id": 10,
+    "name": "Dog"
+  },
+  "name": invalid,
+  "photoUrls": ["https://cdn.shopify.com/s/files/1/0284/2391/3547/articles/American-Pitbull-Puppies-6.JPG_c4357295-9ee4-45f8-9718-e36c98022c46.jpg?v=1603063314"],
+  "status": "available"
+}
+3. Receive response code 400
+4. Verify response error message
+
+
+TC8: Delete pet with valid id
+
+1. Send DELETE request to https://petstore.swagger.io/v2/pet/{{petId}}
+2. Receive response code 200
+
+
+TC9: Delete pet with invalid id
+
+1. Send DELETE request to https://petstore.swagger.io/v2/pet/invalid_id
+2. Receive response code 404
+3. Verify returned error message

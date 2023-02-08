@@ -1,0 +1,33 @@
+1. Download Postman app or Log in to Postman from web (https://identity.getpostman.com/login) using credentials:
+- username: pokiwi4571@crtsec.com
+- password: Test123!
+
+2. Go to Workspaces and select My Workspace
+
+3. Hover over 'Petstore' collection and click on 3 dots (...)
+
+4. Select Run Collection
+
+5. Leave the default options and click 'Run Petstore'
+
+6. When tests are done, you can see total time, how many passed/failed or skipped by some reason
+
+
+
+In case if you want to import tests into your existing Postman account, please follow the steps bellow:
+
+1. Log in to your Postman account
+
+2. Go to Collections -> Import
+
+3. Open folder 'rest-api-automation' and select file 'Petstore.postman_collection'
+
+4. Check checkboxes 'Collection Name' and 'Petstore' if they are not already checked and click Import
+
+5. Once the collection is imported, Hover over 'Petstore' collection and click on 3 dots (...)
+
+4. Select Run Collection
+
+5. Leave the default options and click 'Run Petstore'
+
+6. When tests are done, you can see total time, how many passed/failed or skipped by some reason

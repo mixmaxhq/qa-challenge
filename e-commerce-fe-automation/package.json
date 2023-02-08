@@ -1,0 +1,30 @@
+{
+  "name": "e-commerce-fe-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:test": "npx cypress open",
+    "cypress:test:chrome": "cypress run --spec cypress/e2e --browser chrome --headed",
+    "cypress:test:cli": "cypress run --spec cypress/e2e --browser chrome --headless"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/vladparl/e-commerce-fe-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/vladparl/e-commerce-fe-automation/issues"
+  },
+  "homepage": "https://bitbucket.org/vladparl/e-commerce-fe-automation#readme",
+  "devDependencies": {
+    "cypress": "^12.3.0",
+    "cypress-dotenv": "^2.0.0",
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "dotenv": "^16.0.3",
+    "mocha": "^10.2.0",
+    "randomstring": "^1.2.3"
+  }
+}

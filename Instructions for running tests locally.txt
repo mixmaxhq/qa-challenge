@@ -1,0 +1,24 @@
+1. Install Node 14.17.3 
+https://nodejs.org/download/release/v14.17.3/
+
+2. Verify Installation
+node -v
+npm -v
+
+3. Install VS Code
+
+4. Install Chrome Browser
+
+5. Drag and drop folder 'e-commerce-fe-automation' into empty VS Code window
+
+6. Open new terminal window from Terminal menu, select New Terminal
+
+7. Run 'npm install'
+
+8. Run 'npm run cypress:test:chrome' to start the tests in Google Chrome or
+
+9. Run 'npm run cypress:test:cli' to run tests in command line/headless mode
+
+10. Go to reports folder, right click on report.html and select 'Reveal in File Explorer'
+
+11. Open the report in browser by choice
