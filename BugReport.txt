@@ -1,0 +1,32 @@
+Test Case Description:
+The test case was intended to check the response status code for a POST request with invalid data to the `/pet` endpoint of the petstore API.
+
+Test Environment:
+dev environment
+
+Test Data:
+The following JSON payload was used in the request body:
+{
+  "id": -7859,
+  "name": null,
+  "status": "pending"
+}
+
+Test Result:
+The expected result was a 405 Invalid input response. However, the actual result was a 200 OK response.
+
+
+Steps to Reproduce:
+1. Send a POST request to the endpoint https://petstore.swagger.io/v2/pet
+2. Set the request body to the JSON payload mentioned above.
+3. Observe the response status code and response body.
+
+Impact:
+A random ID was generated and the pet was created
+
+
+Priority:
+High
+
+Assignee:
+Maya G.
