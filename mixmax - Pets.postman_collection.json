@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "af397331-179d-49ec-b4d9-cdef5dae5330",
+		"name": "mixmax - Pets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5791235"
+	},
+	"item": [
+		{
+			"name": "Create Pets",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Generate random pet Id",
+							"// Initialization of Request body params",
+							"var petID = Math.floor(Math.random() * 1000);",
+							"var name = \"henry \" + petID",
+							"var status = \"available\"",
+							"",
+							"// Global setting for usage",
+							"pm.globals.set(\"petID\", petID);",
+							"pm.globals.set(\"name\", name);",
+							"pm.globals.set(\"status\", status);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"status is included\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"",
+							"var body = JSON.parse(responseBody)",
+							"let  petID = pm.globals.get(\"petID\")",
+							"tests [\"pet ID should be Random\"] = body.id == petID",
+							"",
+							"let code = body.status",
+							"tests [\"status is available\"] = code === \"available\""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": {{petID}},\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"{{name}}\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"{{status}}\"\n}"
+				},
+				"url": {
+					"raw": "{{urlPet}}",
+					"host": [
+						"{{urlPet}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Pets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var body = JSON.parse(responseBody)",
+							"if(body.status === \"available\")",
+							"{",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"status is included\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"",
+							"var hello = body.name.includes(\"henry\")",
+							"if(hello == true)",
+							"{",
+							"let name = pm.globals.get('name')",
+							"tests [\"name is random\"] = body.name == name",
+							"}",
+							"else{",
+							"    let Updatename = pm.globals.get('Updatename')",
+							"tests [\"Updatename is random\"] = body.name == Updatename",
+							"}",
+							"}",
+							"else",
+							"{",
+							"    pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);});",
+							"",
+							"    pm.test(\"message is included\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"message\");});",
+							"",
+							"    pm.test(\"Content-Type is present\", function () {",
+							"        pm.response.to.have.header(\"Content-Type\");",
+							"    });",
+							"    pm.test(\"Message matches string\", function () {",
+							"        pm.expect(pm.response.text()).to.include(\"Pet not found\");",
+							"    });",
+							"",
+							"let code = body.code",
+							"tests [\"code is 1\"] = code === 1",
+							"",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{urlPet}}/{{petID}}",
+					"host": [
+						"{{urlPet}}"
+					],
+					"path": [
+						"{{petID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Pets",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var Updatename = \"james \" + Math.floor(Math.random() * 1000);",
+							"pm.globals.set(\"Updatename\", Updatename);",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var body = JSON.parse(responseBody)",
+							"if(body.status === \"available\")",
+							"{",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"let  petID = pm.globals.get(\"petID\")",
+							"tests [\"pet ID should be Random\"] = body.id == petID",
+							"}",
+							"else",
+							"{",
+							"    pm.test(\"status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": {{petID}},\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"{{Updatename}}\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"{{status}}\"\n}"
+				},
+				"url": {
+					"raw": "{{urlPet}}",
+					"host": [
+						"{{urlPet}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var body = JSON.parse(responseBody)",
+							"if(body.code == \"200\")",
+							"{ ",
+							"",
+							"pm.test(\"message is included\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"message\");",
+							"});",
+							"",
+							"pm.test(\"type matches string\", function () {",
+							"        pm.expect(pm.response.text()).to.include(\"unknown\");",
+							"    });",
+							"",
+							"",
+							"pm.test(\"status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"}",
+							"else",
+							"{",
+							"    pm.test(\"status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{urlPet}}/{{petID}}",
+					"host": [
+						"{{urlPet}}"
+					],
+					"path": [
+						"{{petID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Invalid Pets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": {{petID}},\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"string\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"status\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlPet}}",
+					"host": [
+						"{{urlPet}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": ""
+		}
+	]
+}
