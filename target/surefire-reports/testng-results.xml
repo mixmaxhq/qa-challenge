@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-03-08T01:25:59 TRT" name="Ingenious SauceDemo QA Project Test Suite" finished-at="2023-03-08T01:26:47 TRT" duration-ms="48073">
+    <groups>
+    </groups>
+    <test started-at="2023-03-08T01:25:59 TRT" name="First Test - Ordering Successfully" finished-at="2023-03-08T01:26:17 TRT" duration-ms="17902">
+      <class name="tests.web.OrderSuccessTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.web.OrderSuccessTest@15dcfae7]" started-at="2023-03-08T01:25:59 TRT" name="beforeClass" finished-at="2023-03-08T01:25:59 TRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.web.OrderSuccessTest@15dcfae7]" started-at="2023-03-08T01:25:59 TRT" name="beforeMethod" finished-at="2023-03-08T01:26:09 TRT" duration-ms="9357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.web.OrderSuccessTest.FirstTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="FirstTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.web.OrderSuccessTest@15dcfae7]" started-at="2023-03-08T01:26:09 TRT" name="FirstTest" description="Order Successfully Test" data-provider="getTestData" finished-at="2023-03-08T01:26:17 TRT" duration-ms="8182" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CompleteYourOrder]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Login with standard user verify successfully ordered]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sauce Labs Backpack]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Sauce Labs Bike Light]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FirstTest -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.web.OrderSuccessTest@15dcfae7]" started-at="2023-03-08T01:26:17 TRT" name="afterMethod" finished-at="2023-03-08T01:26:17 TRT" duration-ms="128" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=FirstTest status=SUCCESS method=OrderSuccessTest.FirstTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.web.OrderSuccessTest@15dcfae7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- tests.web.OrderSuccessTest -->
+    </test> <!-- First Test - Ordering Successfully -->
+    <test started-at="2023-03-08T01:26:17 TRT" name="Sorting Tests" finished-at="2023-03-08T01:26:38 TRT" duration-ms="20857">
+      <class name="tests.web.SortingTests">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.web.SortingTests@68be8808]" started-at="2023-03-08T01:26:17 TRT" name="beforeClass" finished-at="2023-03-08T01:26:17 TRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.web.SortingTests@68be8808]" started-at="2023-03-08T01:26:17 TRT" name="beforeMethod" finished-at="2023-03-08T01:26:24 TRT" duration-ms="6469" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.web.SortingTests.sortingTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="sortingTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.web.SortingTests@68be8808]" started-at="2023-03-08T01:26:24 TRT" name="sortingTest" description="Sorting Tests with Data Driven" data-provider="getTestData" finished-at="2023-03-08T01:26:27 TRT" duration-ms="3525" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SortByProductName]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Login with standard user and sort items with their name]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Name (A to Z)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortingTest -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.web.SortingTests@68be8808]" started-at="2023-03-08T01:26:27 TRT" name="afterMethod" finished-at="2023-03-08T01:26:27 TRT" duration-ms="122" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sortingTest status=SUCCESS method=SortingTests.sortingTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.web.SortingTests@68be8808] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.web.SortingTests@68be8808]" started-at="2023-03-08T01:26:27 TRT" name="beforeMethod" finished-at="2023-03-08T01:26:34 TRT" duration-ms="6510" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.web.SortingTests.sortingTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="sortingTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.web.SortingTests@68be8808]" started-at="2023-03-08T01:26:34 TRT" name="sortingTest" description="Sorting Tests with Data Driven" data-provider="getTestData" finished-at="2023-03-08T01:26:38 TRT" duration-ms="4104" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SortByProductPrice]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Login with standard user and sort items with their price]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Price (low to high)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortingTest -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.web.SortingTests@68be8808]" started-at="2023-03-08T01:26:38 TRT" name="afterMethod" finished-at="2023-03-08T01:26:38 TRT" duration-ms="107" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sortingTest status=SUCCESS method=SortingTests.sortingTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.web.SortingTests@68be8808] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- tests.web.SortingTests -->
+    </test> <!-- Sorting Tests -->
+    <test started-at="2023-03-08T01:26:38 TRT" name="Locked Out User Test" finished-at="2023-03-08T01:26:47 TRT" duration-ms="9174">
+      <class name="tests.web.LockedOutUserTest">
+        <test-method is-config="true" signature="beforeSuite(org.testng.ITestContext,java.lang.String)[pri:0, instance:tests.web.LockedOutUserTest@758705fa]" started-at="2023-03-08T01:25:59 TRT" name="beforeSuite" finished-at="2023-03-08T01:25:59 TRT" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@20b12f8a]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.web.LockedOutUserTest@758705fa]" started-at="2023-03-08T01:26:38 TRT" name="beforeClass" finished-at="2023-03-08T01:26:38 TRT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.web.LockedOutUserTest@758705fa]" started-at="2023-03-08T01:26:38 TRT" name="beforeMethod" finished-at="2023-03-08T01:26:44 TRT" duration-ms="6116" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.web.LockedOutUserTest.sortingTest(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="sortingTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.web.LockedOutUserTest@758705fa]" started-at="2023-03-08T01:26:44 TRT" name="sortingTest" description="Locked out User for validation fail" data-provider="getTestData" finished-at="2023-03-08T01:26:47 TRT" duration-ms="2722" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LockedOutUserTest]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Login with locked out user to check validation will fail]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[locked_out_user]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Verification of Inventory page expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Verification of Inventory page expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at tests.web.LockedOutUserTest.sortingTest(LockedOutUserTest.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortingTest -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:tests.web.LockedOutUserTest@758705fa]" started-at="2023-03-08T01:26:47 TRT" name="afterMethod" finished-at="2023-03-08T01:26:47 TRT" duration-ms="107" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sortingTest status=FAILURE method=LockedOutUserTest.sortingTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.web.LockedOutUserTest@758705fa] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- tests.web.LockedOutUserTest -->
+    </test> <!-- Locked Out User Test -->
+  </suite> <!-- Ingenious SauceDemo QA Project Test Suite -->
+</testng-results>

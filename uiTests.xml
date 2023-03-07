@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Ingenious SauceDemo QA Project Test Suite" parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="listeners.ReportListener"/>
+        <listener class-name="listeners.TestNGListener"/>
+    </listeners>
+
+    <parameter name="browser" value="chrome"></parameter>
+
+    <test name="Ordering Successfully">
+        <classes>
+            <class name="tests.web.OrderSuccessTest"></class>
+        </classes>
+    </test>
+
+    <test name="Sorting Tests">
+        <classes>
+            <class name="tests.web.SortingTests"></class>
+        </classes>
+    </test>
+
+    <test name="Locked Out User Test">
+        <classes>
+            <class name="tests.web.LockedOutUserTest"></class>
+        </classes>
+    </test>
+
+    <test name="Problem User Test">
+        <classes>
+            <class name="tests.web.ProblemUserTest"></class>
+        </classes>
+    </test>
+
+</suite>
