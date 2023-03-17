@@ -1,0 +1,22 @@
+{
+  "name": "tech-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "openCypress":"node_modules\\.bin\\cypress open",
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest":"npm run test -- --headed",
+    "chromeTest":"npm run test -- --browser chrome",
+    "ui-head":"npm run test -- --headed --spec \"cypress/e2e/ui/*\"",
+    "api-head":"npm run test -- --headed --spec \"cypress/e2e/api/*\"",
+    "ui":"npm run test -- --spec \"cypress/e2e/ui/*\"",
+    "api":"npm run test -- --spec \"cypress/e2e/api/*\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^12.8.1"
+  }
+}
