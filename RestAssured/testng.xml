@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/jesse/Desktop/projects/qa-challenge/RestAssured">
+        <classes>
+            <class name="org.QaDemo.PetTests">
+                <methods>
+                    <include name="addPet"/>
+                    <include name="getPet"/>
+                    <include name="deletePet"/>
+                    <include name="getDeletedPet"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
